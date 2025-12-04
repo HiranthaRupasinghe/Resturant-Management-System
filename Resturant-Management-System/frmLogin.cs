@@ -20,10 +20,17 @@ namespace Resturant_Management_System
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            guna2MessageDialog2.Text = "Are you sure you want to exit the application?";
+
+            DialogResult result = guna2MessageDialog2.Show();
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit(); // Close the application only if Yes is selected
+            }
         }
 
-        private void btnLogin_Click_1(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             //Let create database and user table
 
@@ -34,7 +41,13 @@ namespace Resturant_Management_System
             }
             else
             {
+                // 1. Display the successful login message using guna2MessageDialog3
+                guna2MessageDialog3.Show("Login Successful!");
+
+                // 2. Hide the current (login) form
                 this.Hide();
+
+                // 3. Create and show the main form
                 frmMain frm = new frmMain();
                 frm.Show();
             }
