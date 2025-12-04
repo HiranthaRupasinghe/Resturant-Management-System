@@ -181,20 +181,20 @@
             // 
             // guna2MessageDialog2
             // 
-            this.guna2MessageDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.guna2MessageDialog2.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
             this.guna2MessageDialog2.Caption = null;
-            this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.guna2MessageDialog2.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
             this.guna2MessageDialog2.Parent = this;
-            this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.guna2MessageDialog2.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog2.Text = null;
             // 
             // guna2MessageDialog3
             // 
-            this.guna2MessageDialog3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog3.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
             this.guna2MessageDialog3.Caption = null;
-            this.guna2MessageDialog3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog3.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
             this.guna2MessageDialog3.Parent = this;
-            this.guna2MessageDialog3.Style = Guna.UI2.WinForms.MessageDialogStyle.Default;
+            this.guna2MessageDialog3.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog3.Text = null;
             // 
             // frmLogin

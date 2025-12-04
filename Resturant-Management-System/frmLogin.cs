@@ -20,9 +20,9 @@ namespace Resturant_Management_System
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            guna2MessageDialog2.Text = "Are you sure you want to exit the application?";
+            guna2MessageDialog3.Text = "Are you sure you want to exit the application?";
 
-            DialogResult result = guna2MessageDialog2.Show();
+            DialogResult result = guna2MessageDialog3.Show();
 
             if (result == DialogResult.Yes)
             {
@@ -42,7 +42,7 @@ namespace Resturant_Management_System
             else
             {
                 // 1. Display the successful login message using guna2MessageDialog3
-                guna2MessageDialog3.Show("Login Successful!");
+                guna2MessageDialog2.Show("Login Successful!");
 
                 // 2. Hide the current (login) form
                 this.Hide();
