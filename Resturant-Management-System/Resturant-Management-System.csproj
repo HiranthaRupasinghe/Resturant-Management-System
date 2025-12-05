@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,8 +73,14 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +108,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\User-Interface.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ResturantManagementIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Home-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Categories-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Table-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staff-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Staff-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\POS-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kitchen-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Kitchen-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
