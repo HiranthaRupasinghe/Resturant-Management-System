@@ -118,64 +118,88 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Logout - 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logout - 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Categories-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Categories-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Home-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Home-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kitchen-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kitchen-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ResturantManagementIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ResturantManagementIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Table-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Table-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Products-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Products-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Settings-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Settings-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Home-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Home-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Products-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Products-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="POS-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POS-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Kitchen-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kitchen-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Categories-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Categories-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Logout - 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout - 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Home-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Home-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Staff-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Staff-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Categories-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Categories-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Settings-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User-Interface" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User-Interface.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Welcome-Page-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Welcome-Page-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="POS-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\POS-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="H and M Resturant Management Logo-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\H and M Resturant Management Logo-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Staff-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Staff-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Welcome-Page-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Welcome-Page-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Kitchen-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Kitchen-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Welcome-Page-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Welcome-Page-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Welcome-Page" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Welcome-Page.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Table-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Table-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Logout - 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Logout - 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="H and M Resturant Management Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\H and M Resturant Management Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Staff-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Staff-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="H and M Resturant Management Logo-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\H and M Resturant Management Logo-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="POS-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POS-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logout - 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logout - 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="POS-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\POS-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Settings-2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Settings-2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kitchen-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kitchen-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Products-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Products-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Table-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Table-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User-Interface" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User-Interface.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="H and M Resturant Management Logo-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\H and M Resturant Management Logo-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

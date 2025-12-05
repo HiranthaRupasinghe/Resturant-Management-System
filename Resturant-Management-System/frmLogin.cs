@@ -13,9 +13,14 @@ namespace Resturant_Management_System
 {
     public partial class frmLogin : Form
     {
+
+        private Timer timerFadeIn = new Timer();
         public frmLogin()
         {
             InitializeComponent();
+
+            timerFadeIn.Interval = 10; // 20ms interval for smooth animation
+            timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -24,7 +29,7 @@ namespace Resturant_Management_System
 
             if (result == DialogResult.Yes)
             {
-                Application.Exit(); // Close the application only if Yes is selected
+                this.Close();
             }
         }
 
@@ -39,15 +44,35 @@ namespace Resturant_Management_System
             }
             else
             {
+                //timerFadeIn.Stop();
                 // 1. Display the successful login message using guna2MessageDialog3
                 guna2MessageDialog2.Show("Login Successfully for Our System.", "Login Successful!");
 
                 // 2. Hide the current (login) form
-                this.Hide();
+                this.Close();
 
                 // 3. Create and show the main form
                 frmMain frm = new frmMain();
                 frm.Show();
+            }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            timerFadeIn.Start();
+        }
+
+        private void timerFadeIn_Tick(object sender, EventArgs e)
+        {
+            // Increase the opacity by a small step
+            // 0.05 is a good balance for speed and smoothness (20 steps total)
+            this.Opacity += 0.05;
+
+            // Check if the form is fully visible
+            if (this.Opacity >= 1.0)
+            {
+                // Stop the timer and the animation is complete
+                timerFadeIn.Stop();
             }
         }
     }

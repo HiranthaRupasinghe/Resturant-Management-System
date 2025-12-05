@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDashboard.Designer.cs">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,9 @@
     <Compile Include="MainClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDashboard.resx">
+      <DependentUpon>frmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +174,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout - 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome-Page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome-Page-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome-Page-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Welcome-Page-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H and M Resturant Management Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H and M Resturant Management Logo-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H and M Resturant Management Logo-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\H and M Resturant Management Logo-4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

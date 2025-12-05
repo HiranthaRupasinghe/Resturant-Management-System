@@ -83,6 +83,46 @@ namespace Resturant_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap H_and_M_Resturant_Management_Logo {
+            get {
+                object obj = ResourceManager.GetObject("H and M Resturant Management Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap H_and_M_Resturant_Management_Logo_2 {
+            get {
+                object obj = ResourceManager.GetObject("H and M Resturant Management Logo-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap H_and_M_Resturant_Management_Logo_3 {
+            get {
+                object obj = ResourceManager.GetObject("H and M Resturant Management Logo-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap H_and_M_Resturant_Management_Logo_4 {
+            get {
+                object obj = ResourceManager.GetObject("H and M Resturant Management Logo-4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_1 {
             get {
                 object obj = ResourceManager.GetObject("Home-1", resourceCulture);
@@ -256,6 +296,46 @@ namespace Resturant_Management_System.Properties {
         internal static System.Drawing.Bitmap User_Interface {
             get {
                 object obj = ResourceManager.GetObject("User-Interface", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_Page {
+            get {
+                object obj = ResourceManager.GetObject("Welcome-Page", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_Page_2 {
+            get {
+                object obj = ResourceManager.GetObject("Welcome-Page-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_Page_3 {
+            get {
+                object obj = ResourceManager.GetObject("Welcome-Page-3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome_Page_4 {
+            get {
+                object obj = ResourceManager.GetObject("Welcome-Page-4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
