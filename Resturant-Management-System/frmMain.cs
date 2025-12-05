@@ -70,5 +70,22 @@ namespace Resturant_Management_System
         {
             AddContorls(new frmHome());
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult result = guna2MessageDialog1.Show("Are you sure you want to log out?", "Confirm Logout");
+
+            if (result == DialogResult.Yes)
+            {
+                // 1. Create an instance of the login form
+                frmLogin loginForm = new frmLogin();
+
+                // 2. Hide the current form (assuming this code is in frmMain)
+                this.Hide();
+
+                // 3. Show the login form
+                loginForm.Show();
+            }
+        }
     }
 }

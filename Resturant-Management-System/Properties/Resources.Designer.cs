@@ -123,6 +123,26 @@ namespace Resturant_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logout___1 {
+            get {
+                object obj = ResourceManager.GetObject("Logout - 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logout___2 {
+            get {
+                object obj = ResourceManager.GetObject("Logout - 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap POS_1 {
             get {
                 object obj = ResourceManager.GetObject("POS-1", resourceCulture);
