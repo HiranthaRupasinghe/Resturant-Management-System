@@ -103,6 +103,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Animated = true;
             this.btnExit.AutoRoundedCorners = true;
             this.btnExit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnExit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -164,6 +165,7 @@
             // 
             // btnLogin
             // 
+            this.btnLogin.Animated = true;
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;

@@ -13,7 +13,6 @@ namespace Resturant_Management_System
 {
     public partial class frmLogin : Form
     {
-
         private Timer timerFadeIn = new Timer();
         public frmLogin()
         {
@@ -49,7 +48,7 @@ namespace Resturant_Management_System
                 guna2MessageDialog2.Show("Login Successfully for Our System.", "Login Successful!");
 
                 // 2. Hide the current (login) form
-                this.Close();
+                this.Hide();
 
                 // 3. Create and show the main form
                 frmMain frm = new frmMain();

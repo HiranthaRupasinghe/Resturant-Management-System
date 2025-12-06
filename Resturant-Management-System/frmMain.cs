@@ -13,10 +13,8 @@ namespace Resturant_Management_System
     public partial class frmMain : Form
     {
         private Timer timerFadeIn = new Timer();
-
         private Timer timerFadeOut = new Timer();
 
-        private frmLogin loginForm = null;
         public frmMain()
         {
             InitializeComponent();
@@ -25,12 +23,12 @@ namespace Resturant_Management_System
             timerFadeIn.Interval = 20; // 20ms interval
             timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);
 
+            // *** NEW: Initialize the Fade-Out Timer in the constructor ***
             timerFadeOut.Interval = 20; // Same interval for symmetry
             timerFadeOut.Tick += new EventHandler(timerFadeOut_Tick);
         }
 
         //Methord to add Controls in Main Form
-
         public void AddContorls(Form f)
         {
             CenterPanel.Controls.Clear();
@@ -38,7 +36,6 @@ namespace Resturant_Management_System
             f.TopLevel = false;
             CenterPanel.Controls.Add(f);
             f.Show();
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -93,30 +90,6 @@ namespace Resturant_Management_System
             }
         }
 
-        private void timerFadeOut_Tick(object sender, EventArgs e)
-        {
-            this.Opacity -= 0.05;
-
-            // Check if the form is completely transparent (or less, due to floating point arithmetic)
-            if (this.Opacity <= 0.0)
-            {
-                // 1. Stop the timer
-                timerFadeOut.Stop();
-
-                // 2. Ensure the opacity is exactly 0.0 before hiding
-                this.Opacity = 0.0;
-
-                // 3. Hide the current form (now invisible)
-                this.Hide();
-
-                // 4. Show the stored login form
-                if (loginForm != null)
-                {
-                    loginForm.Show();
-                }
-            }
-        }
-
         private void btnHome_Click(object sender, EventArgs e)
         {
             AddContorls(new frmHome());
@@ -128,40 +101,42 @@ namespace Resturant_Management_System
 
             if (result == DialogResult.Yes)
             {
-                loginForm = new frmLogin();
-                // *** CHANGE: Start the fade-out animation instead of hiding the form immediately ***
-                timerFadeOut.Start();
-
-                Form modalBackground = new Form();
-
-                using (frmLogin loginForm = new frmLogin())
+                if (result == DialogResult.Yes)
                 {
-                    // Configure the dark overlay
-                    modalBackground.StartPosition = FormStartPosition.Manual;
-                    modalBackground.FormBorderStyle = FormBorderStyle.None;
-                    modalBackground.Opacity = 0.70d; // 70% transparency
-                    modalBackground.BackColor = Color.Black;
-                    modalBackground.Size = this.Size;
-                    modalBackground.Location = this.Location;
-                    modalBackground.ShowInTaskbar = false;
-
-                    // Show the overlay over the main form
-                    modalBackground.Show(this);
-
-                    // Link the Login form to the Overlay
-                    loginForm.Owner = modalBackground;
-
-                    // Show the Login form as a Modal Dialog
-                    loginForm.ShowDialog();
-
-                    // Once the Login form is closed (either via successful login or Exit)
-                    // 4. Dispose of the overlay
-                    modalBackground.Dispose();
+                    // *** CHANGE: Start the fade-out animation instead of hiding the form immediately ***
+                    timerFadeOut.Start();
                 }
-
-                // 5. Hide the current Main form after the logout/login process is finished
-                this.Hide();
             }
         }
+
+        private void timerFadeOut_Tick(object sender, EventArgs e)
+        {
+            // Decrease the opacity by a small step
+            this.Opacity -= 0.05;
+
+            // Check if the form is completely transparent
+            if (this.Opacity <= 0.0)
+            {
+                // 1. Stop the timer
+                timerFadeOut.Stop();
+
+                // *** MODIFIED: Use LINQ to find the existing instance of frmDashboard ***
+                // 2. Find the existing Dashboard form
+                frmDashboard DashboardForm = Application.OpenForms.OfType<frmDashboard>().FirstOrDefault();
+
+                // 3. If the Dashboard form does not exist (e.g., if it was closed instead of hidden initially), create it.
+                if (DashboardForm == null)
+                {
+                    DashboardForm = new frmDashboard();
+                }
+
+                // 4. Hide the current form (now that it's invisible)
+                this.Hide();
+
+                // 5. Show the Dashboard form
+                DashboardForm.Show();
+            }
+        }
+
     }
 }
