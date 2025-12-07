@@ -90,5 +90,37 @@ namespace Resturant_Management_System
             btnLogin.Top -= moveUpBy;
             btnSignup.Top -= moveUpBy;
         }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            // 1. Create a transparent background form (The "Blind" effect)
+            Form modalBackground = new Form();
+
+            using (frmSignup signupForm = new frmSignup())
+            {
+                signupForm.Opacity = 0.0;
+                // Configure the dark overlay
+                modalBackground.StartPosition = FormStartPosition.Manual;
+                modalBackground.FormBorderStyle = FormBorderStyle.None;
+                modalBackground.Opacity = 0.70d; // 50% transparency
+                modalBackground.BackColor = Color.Black;
+                modalBackground.Size = this.Size;
+                modalBackground.Location = this.Location;
+                modalBackground.ShowInTaskbar = false;
+
+                // Show the overlay
+                modalBackground.Show(this);
+
+                // 2. Link the Login form to the Overlay
+                signupForm.Owner = modalBackground;
+
+                // 3. Show the Login form as a Modal Dialog
+                // The code stops here until loginForm is closed (via Exit button or Login success)
+                signupForm.ShowDialog();
+
+                // 4. Once Login is closed, dispose of the overlay to "un-blind" the dashboard
+                modalBackground.Dispose();
+            }
+        }
     }
 }

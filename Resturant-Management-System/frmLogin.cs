@@ -61,6 +61,8 @@ namespace Resturant_Management_System
             timerFadeIn.Start();
 
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
+
+            btnForgotPassword.Left = (this.ClientSize.Width - btnForgotPassword.Width) / 2;
         }
 
         private void timerFadeIn_Tick(object sender, EventArgs e)

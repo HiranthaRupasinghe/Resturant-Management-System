@@ -53,15 +53,18 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1383, 42);
-            this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.TabIndex = 2;
             // 
             // btnMinimized
             // 
             this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimized.Animated = true;
+            this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.BorderRadius = 5;
             this.btnMinimized.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMinimized.CustomClick = true;
-            this.btnMinimized.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMinimized.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMinimized.IconColor = System.Drawing.Color.White;
             this.btnMinimized.Location = new System.Drawing.Point(1183, 3);
             this.btnMinimized.Name = "btnMinimized";
@@ -73,9 +76,12 @@
             // 
             this.btnMaximized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximized.Animated = true;
+            this.btnMaximized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximized.BorderRadius = 5;
             this.btnMaximized.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.btnMaximized.CustomClick = true;
-            this.btnMaximized.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnMaximized.FillColor = System.Drawing.Color.Transparent;
+            this.btnMaximized.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMaximized.IconColor = System.Drawing.Color.White;
             this.btnMaximized.Location = new System.Drawing.Point(1251, 3);
             this.btnMaximized.Name = "btnMaximized";
@@ -87,8 +93,11 @@
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.Animated = true;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderRadius = 5;
             this.btnExit.CustomClick = true;
-            this.btnExit.FillColor = System.Drawing.Color.Red;
+            this.btnExit.FillColor = System.Drawing.Color.Transparent;
+            this.btnExit.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(1318, 3);
             this.btnExit.Name = "btnExit";
@@ -112,7 +121,7 @@
             this.btnLogin.Location = new System.Drawing.Point(461, 654);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(172, 48);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 0;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -132,8 +141,9 @@
             this.btnSignup.Location = new System.Drawing.Point(752, 654);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(172, 48);
-            this.btnSignup.TabIndex = 3;
+            this.btnSignup.TabIndex = 1;
             this.btnSignup.Text = "Signup";
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
             // guna2PictureBox3
             // 

@@ -346,7 +346,7 @@
             this.guna2Panel3.Controls.Add(this.btnMaximized);
             this.guna2Panel3.Controls.Add(this.btnExit);
             this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.FillColor = System.Drawing.Color.Gainsboro;
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2Panel3.Location = new System.Drawing.Point(270, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(1076, 53);
@@ -356,19 +356,24 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.BackColor = System.Drawing.Color.Transparent;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.Yellow;
             this.lblUser.Location = new System.Drawing.Point(6, 12);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(65, 28);
+            this.lblUser.Size = new System.Drawing.Size(70, 28);
             this.lblUser.TabIndex = 3;
             this.lblUser.Text = "label1";
             // 
             // btnMinimized
             // 
             this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimized.Animated = true;
+            this.btnMinimized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.BorderRadius = 5;
             this.btnMinimized.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.btnMinimized.CustomClick = true;
-            this.btnMinimized.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.btnMinimized.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimized.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMinimized.IconColor = System.Drawing.Color.White;
             this.btnMinimized.Location = new System.Drawing.Point(884, 3);
             this.btnMinimized.Name = "btnMinimized";
@@ -379,9 +384,13 @@
             // btnMaximized
             // 
             this.btnMaximized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximized.Animated = true;
+            this.btnMaximized.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximized.BorderRadius = 5;
             this.btnMaximized.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.btnMaximized.CustomClick = true;
-            this.btnMaximized.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.btnMaximized.FillColor = System.Drawing.Color.Transparent;
+            this.btnMaximized.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnMaximized.IconColor = System.Drawing.Color.White;
             this.btnMaximized.Location = new System.Drawing.Point(949, 3);
             this.btnMaximized.Name = "btnMaximized";
@@ -392,8 +401,12 @@
             // btnExit
             // 
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.Animated = true;
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.BorderRadius = 5;
             this.btnExit.CustomClick = true;
-            this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
+            this.btnExit.FillColor = System.Drawing.Color.Transparent;
+            this.btnExit.HoverState.FillColor = System.Drawing.Color.Red;
             this.btnExit.IconColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(1014, 3);
             this.btnExit.Name = "btnExit";

@@ -17,7 +17,7 @@ namespace Resturant_Management_System
         public static bool IsValidUser(string username, string password)
         {
             bool isValid = false;
-            string qry = @"Select * from users where username = '" + username + "' and upass = '" + password + "'";
+            string qry = @"Select * from users where username = '" + username + "' COLLATE SQL_Latin1_General_CP1_CS_AS and upass = '" + password + "' COLLATE SQL_Latin1_General_CP1_CS_AS";
             SqlCommand cmd = new SqlCommand(qry, con);
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
