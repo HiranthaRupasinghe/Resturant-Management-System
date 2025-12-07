@@ -59,6 +59,8 @@ namespace Resturant_Management_System
         private void frmLogin_Load(object sender, EventArgs e)
         {
             timerFadeIn.Start();
+
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
         }
 
         private void timerFadeIn_Tick(object sender, EventArgs e)
