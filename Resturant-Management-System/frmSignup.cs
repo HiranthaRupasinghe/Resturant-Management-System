@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +25,8 @@ namespace Resturant_Management_System
         private void frmSignup_Load(object sender, EventArgs e)
         {
             timerFadeIn.Start();
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
+            btnExit.Left = (this.ClientSize.Width - btnExit.Width) / 2;
         }
 
         private void timerFadeIn_Tick(object sender, EventArgs e)
@@ -37,6 +40,21 @@ namespace Resturant_Management_System
             {
                 // Stop the timer and the animation is complete
                 timerFadeIn.Stop();
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = guna2MessageDialog1.Show("Are you sure you want to exit the application?", "Confirm Exit");
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }
