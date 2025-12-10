@@ -18,6 +18,7 @@ namespace Resturant_Management_System
         {
             InitializeComponent();
 
+            this.Opacity = 0;
             timerFadeIn.Interval = 10; // 20ms interval for smooth animation
             timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);
         }

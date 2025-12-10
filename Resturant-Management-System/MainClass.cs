@@ -41,5 +41,37 @@ namespace Resturant_Management_System
             private set { user = value; }
         }
 
+        public static int CRUD(string qry, params SqlParameter[] parameters)
+        {
+            int res = 0;
+            try
+            {
+                SqlCommand cmd = new SqlCommand(qry, con);
+                // Add parameters to the command if any are provided
+                if (parameters != null)
+                {
+                    cmd.Parameters.AddRange(parameters);
+                }
+
+                con.Open();
+                res = cmd.ExecuteNonQuery(); // Execute the command
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                // Handle exception (e.g., log it or show a message)
+                System.Windows.Forms.MessageBox.Show("Database Error: " + ex.Message);
+                res = -1; // Indicate failure
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+            return res;
+        }
     }
+
 }
