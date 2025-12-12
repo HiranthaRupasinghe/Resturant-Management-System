@@ -51,34 +51,7 @@ namespace Resturant_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // 1. Create a transparent background form (The "Blind" effect)
-            Form modalBackground = new Form();
-
-            using (frmLogin loginForm = new frmLogin())
-            {
-                loginForm.Opacity = 0.0;
-                // Configure the dark overlay
-                modalBackground.StartPosition = FormStartPosition.Manual;
-                modalBackground.FormBorderStyle = FormBorderStyle.None;
-                modalBackground.Opacity = 0.70d; // 50% transparency
-                modalBackground.BackColor = Color.Black;
-                modalBackground.Size = this.Size;
-                modalBackground.Location = this.Location;
-                modalBackground.ShowInTaskbar = false;
-
-                // Show the overlay
-                modalBackground.Show(this);
-
-                // 2. Link the Login form to the Overlay
-                loginForm.Owner = modalBackground;
-
-                // 3. Show the Login form as a Modal Dialog
-                // The code stops here until loginForm is closed (via Exit button or Login success)
-                loginForm.ShowDialog();
-
-                // 4. Once Login is closed, dispose of the overlay to "un-blind" the dashboard
-                modalBackground.Dispose();
-            }
+            ShowLoginFormWithOverlay();
         }
 
         private void frmDashboard_Load(object sender, EventArgs e)
@@ -93,16 +66,32 @@ namespace Resturant_Management_System
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
+         
+            DialogResult result = ShowSignupFormAndGetResult();
+
+            if (result == DialogResult.OK)
+            {
+                // If DialogResult.OK is returned (which happens when btnLogin is clicked on frmSignup)
+                ShowLoginFormWithOverlay();
+            }
+
+        }
+
+        // Inside Resturant_Management_System.frmDashboard
+
+        // *** NEW METHOD to handle the transition to the Login Form with Overlay ***
+        private void ShowLoginFormWithOverlay()
+        {
             // 1. Create a transparent background form (The "Blind" effect)
             Form modalBackground = new Form();
 
-            using (frmSignup signupForm = new frmSignup())
+            using (frmLogin loginForm = new frmLogin())
             {
-                signupForm.Opacity = 0.0;
+                loginForm.Opacity = 0.0;
                 // Configure the dark overlay
                 modalBackground.StartPosition = FormStartPosition.Manual;
                 modalBackground.FormBorderStyle = FormBorderStyle.None;
-                modalBackground.Opacity = 0.70d; // 50% transparency
+                modalBackground.Opacity = 0.70d;
                 modalBackground.BackColor = Color.Black;
                 modalBackground.Size = this.Size;
                 modalBackground.Location = this.Location;
@@ -112,15 +101,46 @@ namespace Resturant_Management_System
                 modalBackground.Show(this);
 
                 // 2. Link the Login form to the Overlay
-                signupForm.Owner = modalBackground;
+                loginForm.Owner = modalBackground;
 
                 // 3. Show the Login form as a Modal Dialog
-                // The code stops here until loginForm is closed (via Exit button or Login success)
-                signupForm.ShowDialog();
+                loginForm.ShowDialog();
 
-                // 4. Once Login is closed, dispose of the overlay to "un-blind" the dashboard
+                // 4. Once Login is closed, dispose of the overlay
                 modalBackground.Dispose();
             }
+        }
+
+        private DialogResult ShowSignupFormAndGetResult()
+        {
+            Form modalBackground = new Form();
+            DialogResult result = DialogResult.Cancel; // Default result
+
+            using (frmSignup signupForm = new frmSignup())
+            {
+                signupForm.Opacity = 0.0;
+                // Configure the dark overlay
+                modalBackground.StartPosition = FormStartPosition.Manual;
+                modalBackground.FormBorderStyle = FormBorderStyle.None;
+                modalBackground.Opacity = 0.70d;
+                modalBackground.BackColor = Color.Black;
+                modalBackground.Size = this.Size;
+                modalBackground.Location = this.Location;
+                modalBackground.ShowInTaskbar = false;
+
+                // Show the overlay
+                modalBackground.Show(this);
+
+                // Link the Signup form to the Overlay
+                signupForm.Owner = modalBackground;
+
+                // Show the Signup form as a Modal Dialog and capture the result
+                result = signupForm.ShowDialog();
+
+                // Once Signup is closed, dispose of the overlay
+                modalBackground.Dispose();
+            }
+            return result;
         }
     }
 }

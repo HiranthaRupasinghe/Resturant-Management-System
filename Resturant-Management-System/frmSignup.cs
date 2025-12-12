@@ -64,14 +64,18 @@ namespace Resturant_Management_System
         private void btnLogin_Click(object sender, EventArgs e)
         {
             // 1. Create an instance of the Login form
-            frmLogin loginForm = new frmLogin();
+            //frmLogin loginForm = new frmLogin();
 
             // 2. Show the Login form
             // Since frmLogin also has a fade-in timer, simply showing it will trigger its animation.
-            loginForm.Show();
+            //loginForm.Show();
 
             // 3. Close the current Signup form
+            // this.Close();
+
+            this.DialogResult = DialogResult.OK;
             this.Close();
+
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
