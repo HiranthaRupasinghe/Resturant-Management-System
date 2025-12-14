@@ -65,7 +65,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(482, 181);
-            this.guna2Panel1.TabIndex = 0;
+            this.guna2Panel1.TabIndex = 10;
             // 
             // lblTitle
             // 
@@ -76,7 +76,7 @@
             this.lblTitle.Location = new System.Drawing.Point(75, 101);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(396, 28);
-            this.lblTitle.TabIndex = 8;
+            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "H and M Resturant Management System";
             // 
             // guna2PictureBox1
@@ -106,7 +106,7 @@
             this.btnExit.Location = new System.Drawing.Point(161, 757);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(132, 47);
-            this.btnExit.TabIndex = 5;
+            this.btnExit.TabIndex = 9;
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
@@ -138,7 +138,7 @@
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(338, 40);
-            this.txtName.TabIndex = 6;
+            this.txtName.TabIndex = 0;
             // 
             // label1
             // 
@@ -148,7 +148,7 @@
             this.label1.Location = new System.Drawing.Point(64, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 23);
-            this.label1.TabIndex = 7;
+            this.label1.TabIndex = 11;
             this.label1.Text = "Name";
             // 
             // txtPassword
@@ -170,7 +170,7 @@
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(338, 40);
-            this.txtPassword.TabIndex = 10;
+            this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
@@ -181,7 +181,7 @@
             this.label3.Location = new System.Drawing.Point(64, 337);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 23);
-            this.label3.TabIndex = 11;
+            this.label3.TabIndex = 13;
             this.label3.Text = "Password";
             // 
             // txtConfirmPassword
@@ -203,7 +203,7 @@
             this.txtConfirmPassword.PlaceholderText = "";
             this.txtConfirmPassword.SelectedText = "";
             this.txtConfirmPassword.Size = new System.Drawing.Size(338, 40);
-            this.txtConfirmPassword.TabIndex = 12;
+            this.txtConfirmPassword.TabIndex = 3;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
             // label4
@@ -214,7 +214,7 @@
             this.label4.Location = new System.Drawing.Point(64, 408);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 23);
-            this.label4.TabIndex = 13;
+            this.label4.TabIndex = 14;
             this.label4.Text = "Confirm Password";
             // 
             // txtPhone
@@ -236,7 +236,7 @@
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(338, 40);
-            this.txtPhone.TabIndex = 14;
+            this.txtPhone.TabIndex = 4;
             // 
             // label5
             // 
@@ -257,7 +257,7 @@
             this.label6.Location = new System.Drawing.Point(64, 550);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(144, 23);
-            this.label6.TabIndex = 17;
+            this.label6.TabIndex = 16;
             this.label6.Text = "Security Question";
             // 
             // cmdSecurityQuestion
@@ -286,7 +286,7 @@
             this.cmdSecurityQuestion.Location = new System.Drawing.Point(68, 576);
             this.cmdSecurityQuestion.Name = "cmdSecurityQuestion";
             this.cmdSecurityQuestion.Size = new System.Drawing.Size(338, 36);
-            this.cmdSecurityQuestion.TabIndex = 18;
+            this.cmdSecurityQuestion.TabIndex = 5;
             // 
             // txtAnswer
             // 
@@ -307,7 +307,7 @@
             this.txtAnswer.PlaceholderText = "";
             this.txtAnswer.SelectedText = "";
             this.txtAnswer.Size = new System.Drawing.Size(338, 40);
-            this.txtAnswer.TabIndex = 19;
+            this.txtAnswer.TabIndex = 6;
             // 
             // label7
             // 
@@ -317,7 +317,7 @@
             this.label7.Location = new System.Drawing.Point(64, 624);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 23);
-            this.label7.TabIndex = 20;
+            this.label7.TabIndex = 17;
             this.label7.Text = "Answer";
             // 
             // btnSignup
@@ -335,7 +335,7 @@
             this.btnSignup.Location = new System.Drawing.Point(68, 704);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(132, 47);
-            this.btnSignup.TabIndex = 21;
+            this.btnSignup.TabIndex = 7;
             this.btnSignup.Text = "Signup";
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
@@ -355,7 +355,7 @@
             this.btnLogin.Location = new System.Drawing.Point(274, 704);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(132, 47);
-            this.btnLogin.TabIndex = 22;
+            this.btnLogin.TabIndex = 8;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -378,7 +378,7 @@
             this.txtUsername.PlaceholderText = "";
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(338, 40);
-            this.txtUsername.TabIndex = 24;
+            this.txtUsername.TabIndex = 1;
             // 
             // label2
             // 
@@ -388,7 +388,7 @@
             this.label2.Location = new System.Drawing.Point(64, 266);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 23);
-            this.label2.TabIndex = 25;
+            this.label2.TabIndex = 12;
             this.label2.Text = "Username";
             // 
             // guna2MessageDialog2

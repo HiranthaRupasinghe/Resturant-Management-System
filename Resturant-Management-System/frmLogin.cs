@@ -48,12 +48,19 @@ namespace Resturant_Management_System
                 // 1. Display the successful login message using guna2MessageDialog3
                 guna2MessageDialog2.Show("Login Successfully for Our System.", "Login Successful!");
 
-                // 2. Hide the current (login) form
-                this.Hide();
+                frmDashboard dashboard = Application.OpenForms.OfType<frmDashboard>().FirstOrDefault();
+                if (dashboard != null)
+                {
+                    dashboard.Hide(); // Or dashboard.Close();
+                }
 
                 // 3. Create and show the main form
                 frmMain frm = new frmMain();
                 frm.Show();
+
+                // 2. Hide the current (login) form
+                this.Close();
+
             }
         }
 

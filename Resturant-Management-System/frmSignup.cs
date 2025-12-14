@@ -16,6 +16,9 @@ namespace Resturant_Management_System
     public partial class frmSignup : Form
     {
         private Timer timerFadeIn = new Timer();
+
+        private Timer timerFadeOut = new Timer();
+        private bool isClosing = false;
         public frmSignup()
         {
             InitializeComponent();
@@ -23,6 +26,9 @@ namespace Resturant_Management_System
             this.Opacity = 0;
             timerFadeIn.Interval = 10; // 20ms interval for smooth animation
             timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);
+
+            timerFadeOut.Interval = 10;
+            timerFadeOut.Tick += new EventHandler(timerFadeOut_Tick);
         }
 
         private void frmSignup_Load(object sender, EventArgs e)
@@ -43,6 +49,36 @@ namespace Resturant_Management_System
             {
                 // Stop the timer and the animation is complete
                 timerFadeIn.Stop();
+            }
+        }
+
+        private void timerFadeOut_Tick(object sender, EventArgs e)
+        {
+            // Decrease the opacity by a small step
+            this.Opacity -= 0.05;
+
+            // Check if the form is fully invisible
+            if (this.Opacity <= 0.0)
+            {
+                timerFadeOut.Stop();
+                // Finally close the form after the animation is complete
+                isClosing = true;
+                this.Close();
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // Check if the form is already in the process of closing after the animation
+            if (!isClosing && e.CloseReason == CloseReason.UserClosing)
+            {
+                // Cancel the default close operation
+                e.Cancel = true;
+
+                // Start the fade-out animation
+                timerFadeOut.Start();
             }
         }
 
@@ -74,7 +110,8 @@ namespace Resturant_Management_System
             // this.Close();
 
             this.DialogResult = DialogResult.OK;
-            this.Close();
+            //this.Close();
+            timerFadeOut.Start();
 
         }
 
@@ -157,6 +194,9 @@ namespace Resturant_Management_System
                 txtPhone.Clear();
                 cmdSecurityQuestion.SelectedIndex = -1; // Reset ComboBox selection
                 txtAnswer.Clear();
+
+                //this.Close();
+                timerFadeOut.Start();
             }
             else if (result == -1)
             {

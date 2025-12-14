@@ -12,9 +12,22 @@ namespace Resturant_Management_System
 {
     public partial class frmDashboard : Form
     {
+        private Timer timerFadeIn = new Timer();
         public frmDashboard()
         {
             InitializeComponent();
+
+            this.Opacity = 0.0; // Start completely transparent
+            timerFadeIn.Interval = 20; // 20ms interval (or 10 as you used in frmLogin)
+            timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);
+        }
+
+        public void StartFadeIn()
+        {
+            // Reset opacity and restart the timer for the fade-in effect
+            this.Opacity = 0.0;
+            timerFadeIn.Stop();
+            timerFadeIn.Start();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -62,6 +75,8 @@ namespace Resturant_Management_System
             // Subtract from the 'Top' property to move up
             btnLogin.Top -= moveUpBy;
             btnSignup.Top -= moveUpBy;
+
+            timerFadeIn.Start();
         }
 
         private void btnSignup_Click(object sender, EventArgs e)
@@ -141,6 +156,19 @@ namespace Resturant_Management_System
                 modalBackground.Dispose();
             }
             return result;
+        }
+
+        private void timerFadeIn_Tick(object sender, EventArgs e)
+        {
+            // Increase the opacity by a small step
+            this.Opacity += 0.05;
+
+            // Check if the form is fully visible
+            if (this.Opacity >= 1.0)
+            {
+                // Stop the timer when the animation is complete
+                timerFadeIn.Stop();
+            }
         }
     }
 }

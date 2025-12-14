@@ -130,11 +130,19 @@ namespace Resturant_Management_System
                     DashboardForm = new frmDashboard();
                 }
 
+                else
+                {
+                    DashboardForm.Opacity = 0.0;
+                    // If it was hidden on login, show it again for the logout process.
+                    DashboardForm.Show();
+                }
+
                 // 4. Hide the current form (now that it's invisible)
-                this.Hide();
+                this.Close();
 
                 // 5. Show the Dashboard form
-                DashboardForm.Show();
+                //DashboardForm.Show();
+                DashboardForm.StartFadeIn();
             }
         }
 
