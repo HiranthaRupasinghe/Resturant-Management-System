@@ -44,6 +44,7 @@
             this.guna2MessageDialog2 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog3 = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.btnForgotPassword = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignup = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -118,7 +119,7 @@
             this.btnExit.FillColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(253, 495);
+            this.btnExit.Location = new System.Drawing.Point(285, 634);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(132, 47);
             this.btnExit.TabIndex = 4;
@@ -263,11 +264,30 @@
             this.btnForgotPassword.TabIndex = 7;
             this.btnForgotPassword.Text = "Forgot Password ?";
             // 
+            // btnSignup
+            // 
+            this.btnSignup.Animated = true;
+            this.btnSignup.AutoRoundedCorners = true;
+            this.btnSignup.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignup.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignup.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignup.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
+            this.btnSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSignup.ForeColor = System.Drawing.Color.White;
+            this.btnSignup.Location = new System.Drawing.Point(253, 495);
+            this.btnSignup.Name = "btnSignup";
+            this.btnSignup.Size = new System.Drawing.Size(132, 47);
+            this.btnSignup.TabIndex = 8;
+            this.btnSignup.Text = "Signup";
+            this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 620);
+            this.ClientSize = new System.Drawing.Size(437, 693);
+            this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.btnForgotPassword);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.guna2Panel1);
@@ -310,5 +330,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private System.Windows.Forms.Label lblTitle;
         private Guna.UI2.WinForms.Guna2Button btnForgotPassword;
+        private Guna.UI2.WinForms.Guna2Button btnSignup;
     }
 }

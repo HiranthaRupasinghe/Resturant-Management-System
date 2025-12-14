@@ -14,6 +14,9 @@ namespace Resturant_Management_System
     public partial class frmLogin : Form
     {
         private Timer timerFadeIn = new Timer();
+
+        private Timer timerFadeOut = new Timer();
+        private bool isClosing = false;
         public frmLogin()
         {
             InitializeComponent();
@@ -21,6 +24,37 @@ namespace Resturant_Management_System
             this.Opacity = 0;
             timerFadeIn.Interval = 10; // 20ms interval for smooth animation
             timerFadeIn.Tick += new EventHandler(timerFadeIn_Tick);
+
+            timerFadeOut.Interval = 10;
+            timerFadeOut.Tick += new EventHandler(timerFadeOut_Tick);
+        }
+
+        private void timerFadeOut_Tick(object sender, EventArgs e)
+        {
+            this.Opacity -= 0.05;
+
+            if (this.Opacity <= 0.0)
+            {
+                timerFadeOut.Stop();
+                // Finally close the form after the animation is complete
+                isClosing = true;
+                this.Close();
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+
+            // Check if the form is already in the process of closing after the animation
+            if (!isClosing && e.CloseReason == CloseReason.UserClosing)
+            {
+                // Cancel the default close operation
+                e.Cancel = true;
+
+                // Start the fade-out animation
+                timerFadeOut.Start();
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -48,7 +82,12 @@ namespace Resturant_Management_System
                 // 1. Display the successful login message using guna2MessageDialog3
                 guna2MessageDialog2.Show("Login Successfully for Our System.", "Login Successful!");
 
-                frmDashboard dashboard = Application.OpenForms.OfType<frmDashboard>().FirstOrDefault();
+                this.DialogResult = DialogResult.OK;
+
+                // Start Fade-Out animation before closing
+                timerFadeOut.Start();
+
+                /*frmDashboard dashboard = Application.OpenForms.OfType<frmDashboard>().FirstOrDefault();
                 if (dashboard != null)
                 {
                     dashboard.Hide(); // Or dashboard.Close();
@@ -59,7 +98,7 @@ namespace Resturant_Management_System
                 frm.Show();
 
                 // 2. Hide the current (login) form
-                this.Close();
+                this.Close();*/
 
             }
         }
@@ -85,6 +124,13 @@ namespace Resturant_Management_System
                 // Stop the timer and the animation is complete
                 timerFadeIn.Stop();
             }
+        }
+
+        private void btnSignup_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Retry;
+            //this.Close();
+            timerFadeOut.Start();
         }
     }
 }

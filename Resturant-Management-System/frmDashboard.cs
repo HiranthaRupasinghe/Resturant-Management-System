@@ -64,8 +64,38 @@ namespace Resturant_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            ShowLoginFormWithOverlay();
+            DialogResult result = ShowLoginFormAndGetResult();
+
+            if (result == DialogResult.Retry)
+            {
+                // If DialogResult.OK is returned (which happens when btnSignup is clicked on frmLogin)
+                DialogResult signupResult = ShowSignupFormAndGetResult();
+
+                if (signupResult == DialogResult.OK)
+                {
+                    // If the user signed up successfully (DialogResult.OK from frmSignup)
+                    // automatically reopen the Login form.
+                    btnLogin_Click(sender, e);
+                }
+            }
+
+            else if (result == DialogResult.OK)
+            {
+                // 2. Successful Login - proceed to main form
+                // This is where the application flow continues.
+
+                // Hide the dashboard
+                this.Hide();
+
+                // Create and show the main form (frmMain should exist in your project)
+                frmMain frm = new frmMain();
+                frm.Show();
+
+                // Close the dashboard if you don't need it hidden in the background
+                // this.Close();
+            }
         }
+
 
         private void frmDashboard_Load(object sender, EventArgs e)
         {
@@ -87,7 +117,7 @@ namespace Resturant_Management_System
             if (result == DialogResult.OK)
             {
                 // If DialogResult.OK is returned (which happens when btnLogin is clicked on frmSignup)
-                ShowLoginFormWithOverlay();
+                ShowLoginFormAndGetResult();
             }
 
         }
@@ -95,10 +125,11 @@ namespace Resturant_Management_System
         // Inside Resturant_Management_System.frmDashboard
 
         // *** NEW METHOD to handle the transition to the Login Form with Overlay ***
-        private void ShowLoginFormWithOverlay()
+        private DialogResult ShowLoginFormAndGetResult()
         {
             // 1. Create a transparent background form (The "Blind" effect)
             Form modalBackground = new Form();
+            DialogResult result = DialogResult.Cancel;
 
             using (frmLogin loginForm = new frmLogin())
             {
@@ -119,11 +150,12 @@ namespace Resturant_Management_System
                 loginForm.Owner = modalBackground;
 
                 // 3. Show the Login form as a Modal Dialog
-                loginForm.ShowDialog();
+                result = loginForm.ShowDialog();
 
                 // 4. Once Login is closed, dispose of the overlay
                 modalBackground.Dispose();
             }
+            return result;
         }
 
         private DialogResult ShowSignupFormAndGetResult()
