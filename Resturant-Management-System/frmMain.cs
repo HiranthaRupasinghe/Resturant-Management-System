@@ -104,7 +104,15 @@ namespace Resturant_Management_System
                 if (result == DialogResult.Yes)
                 {
                     // *** CHANGE: Start the fade-out animation instead of hiding the form immediately ***
-                    timerFadeOut.Start();
+                    //timerFadeOut.Start();
+                    frmDashboard dashboardForm = new frmDashboard();
+
+                    // 2. Show the new form
+                    dashboardForm.Show();
+
+                    // 3. Hide or Close the current form (frmMain)
+                    // 'this' refers to the current instance of frmMain
+                    this.Hide();
                 }
             }
         }

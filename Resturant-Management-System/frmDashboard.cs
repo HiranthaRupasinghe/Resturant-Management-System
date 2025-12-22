@@ -66,7 +66,7 @@ namespace Resturant_Management_System
         {
             DialogResult result = ShowLoginFormAndGetResult();
 
-            if (result == DialogResult.Retry)
+            while (result == DialogResult.Retry)
             {
                 // If DialogResult.OK is returned (which happens when btnSignup is clicked on frmLogin)
                 DialogResult signupResult = ShowSignupFormAndGetResult();
@@ -75,11 +75,17 @@ namespace Resturant_Management_System
                 {
                     // If the user signed up successfully (DialogResult.OK from frmSignup)
                     // automatically reopen the Login form.
-                    btnLogin_Click(sender, e);
+                    result = ShowLoginFormAndGetResult();
+                }
+
+                else
+                {
+                    // User closed Signup form or finished
+                    break;
                 }
             }
 
-            else if (result == DialogResult.OK)
+            if (result == DialogResult.OK)
             {
                 // 2. Successful Login - proceed to main form
                 // This is where the application flow continues.
@@ -114,12 +120,29 @@ namespace Resturant_Management_System
          
             DialogResult result = ShowSignupFormAndGetResult();
 
-            if (result == DialogResult.OK)
+            while (result == DialogResult.OK)
             {
-                // If DialogResult.OK is returned (which happens when btnLogin is clicked on frmSignup)
-                ShowLoginFormAndGetResult();
-            }
+                // User clicked "Login" from Signup Form
+                DialogResult loginResult = ShowLoginFormAndGetResult();
 
+                if (loginResult == DialogResult.Retry)
+                {
+                    // User clicked "Signup" from Login Form, show Signup again
+                    result = ShowSignupFormAndGetResult();
+                }
+                else if (loginResult == DialogResult.OK)
+                {
+                    // Successful login from the switched login form
+                    this.Hide();
+                    frmMain frm = new frmMain();
+                    frm.Show();
+                    break;
+                }
+                else
+                {
+                    break;
+                }
+            }
         }
 
         // Inside Resturant_Management_System.frmDashboard

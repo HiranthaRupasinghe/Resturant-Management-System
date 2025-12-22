@@ -71,6 +71,12 @@ namespace Resturant_Management_System
         {
             //Let create database and user table
 
+            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                guna2MessageDialog1.Show("Please fill in all required fields.", "Login Fail!");
+                return; // Exit the method so it doesn't try to validate the user
+            }
+
             if (MainClass.IsValidUser(txtUsername.Text, txtPassword.Text) == false)
             {
                 guna2MessageDialog1.Show("Invalid username or password", "Login Fail!");
