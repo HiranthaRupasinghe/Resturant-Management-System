@@ -255,7 +255,7 @@
             this.btnForgotPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnForgotPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnForgotPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnForgotPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
+            this.btnForgotPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnForgotPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnForgotPassword.ForeColor = System.Drawing.Color.White;
             this.btnForgotPassword.Location = new System.Drawing.Point(94, 561);
@@ -263,6 +263,7 @@
             this.btnForgotPassword.Size = new System.Drawing.Size(228, 47);
             this.btnForgotPassword.TabIndex = 7;
             this.btnForgotPassword.Text = "Forgot Password ?";
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
             // btnSignup
             // 

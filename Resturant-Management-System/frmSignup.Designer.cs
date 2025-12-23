@@ -64,7 +64,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(55)))), ((int)(((byte)(89)))));
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(482, 181);
+            this.guna2Panel1.Size = new System.Drawing.Size(519, 181);
             this.guna2Panel1.TabIndex = 10;
             // 
             // lblTitle
@@ -103,7 +103,7 @@
             this.btnExit.FillColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(161, 757);
+            this.btnExit.Location = new System.Drawing.Point(186, 757);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(132, 47);
             this.btnExit.TabIndex = 9;
@@ -137,7 +137,7 @@
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
             this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(338, 40);
+            this.txtName.Size = new System.Drawing.Size(375, 40);
             this.txtName.TabIndex = 0;
             // 
             // label1
@@ -169,7 +169,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(338, 40);
+            this.txtPassword.Size = new System.Drawing.Size(375, 40);
             this.txtPassword.TabIndex = 2;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -202,7 +202,7 @@
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PlaceholderText = "";
             this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(338, 40);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(375, 40);
             this.txtConfirmPassword.TabIndex = 3;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -235,7 +235,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "";
             this.txtPhone.SelectedText = "";
-            this.txtPhone.Size = new System.Drawing.Size(338, 40);
+            this.txtPhone.Size = new System.Drawing.Size(375, 40);
             this.txtPhone.TabIndex = 4;
             // 
             // label5
@@ -285,7 +285,7 @@
             "What is your favorite book?"});
             this.cmdSecurityQuestion.Location = new System.Drawing.Point(68, 576);
             this.cmdSecurityQuestion.Name = "cmdSecurityQuestion";
-            this.cmdSecurityQuestion.Size = new System.Drawing.Size(338, 36);
+            this.cmdSecurityQuestion.Size = new System.Drawing.Size(375, 36);
             this.cmdSecurityQuestion.TabIndex = 5;
             // 
             // txtAnswer
@@ -306,7 +306,7 @@
             this.txtAnswer.Name = "txtAnswer";
             this.txtAnswer.PlaceholderText = "";
             this.txtAnswer.SelectedText = "";
-            this.txtAnswer.Size = new System.Drawing.Size(338, 40);
+            this.txtAnswer.Size = new System.Drawing.Size(375, 40);
             this.txtAnswer.TabIndex = 6;
             // 
             // label7
@@ -352,7 +352,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(85)))), ((int)(((byte)(126)))));
-            this.btnLogin.Location = new System.Drawing.Point(274, 704);
+            this.btnLogin.Location = new System.Drawing.Point(311, 704);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(132, 47);
             this.btnLogin.TabIndex = 8;
@@ -377,7 +377,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PlaceholderText = "";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(338, 40);
+            this.txtUsername.Size = new System.Drawing.Size(375, 40);
             this.txtUsername.TabIndex = 1;
             // 
             // label2
@@ -423,7 +423,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(482, 816);
+            this.ClientSize = new System.Drawing.Size(519, 816);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);

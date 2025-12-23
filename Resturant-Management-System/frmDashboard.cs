@@ -85,6 +85,38 @@ namespace Resturant_Management_System
                 }
             }
 
+            while (result == DialogResult.No)
+            {
+                // If DialogResult.OK is returned (which happens when btnSignup is clicked on frmLogin)
+                DialogResult forgotResult = ShowForgotPasswordFormAndGetResult();
+
+                if (forgotResult == DialogResult.OK)
+                {
+                    // If the user signed up successfully (DialogResult.OK from frmSignup)
+                    // automatically reopen the Login form.
+                    result = ShowLoginFormAndGetResult();
+                }
+
+                else if (forgotResult == DialogResult.Retry)
+                {
+                    // FIX: If user clicks "Signup" inside Forgot Password form
+                    result = DialogResult.Retry; // This will break this loop and trigger the Signup logic below
+                    break;
+                }
+
+                else
+                {
+                    // User closed Signup form or finished
+                    break;
+                }
+            }
+
+            if (result == DialogResult.Retry)
+            {
+                // Reuse your existing signup logic or trigger the btnSignup_Click event
+                btnSignup_Click(sender, e);
+            }
+
             if (result == DialogResult.OK)
             {
                 // 2. Successful Login - proceed to main form
@@ -117,29 +149,52 @@ namespace Resturant_Management_System
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-         
+
             DialogResult result = ShowSignupFormAndGetResult();
 
-            while (result == DialogResult.OK)
+            // We use a loop to allow the user to navigate between Login, Signup, and Forgot Password
+            while (result == DialogResult.OK || result == DialogResult.No || result == DialogResult.Retry)
             {
-                // User clicked "Login" from Signup Form
-                DialogResult loginResult = ShowLoginFormAndGetResult();
+                if (result == DialogResult.OK)
+                {
+                    // User clicked "Login" from Signup Form OR finished Signup and we want to show Login
+                    DialogResult loginResult = ShowLoginFormAndGetResult();
 
-                if (loginResult == DialogResult.Retry)
-                {
-                    // User clicked "Signup" from Login Form, show Signup again
-                    result = ShowSignupFormAndGetResult();
+                    if (loginResult == DialogResult.OK)
+                    {
+                        // Successful login - Transition to Main Form
+                        this.Hide();
+                        frmMain frm = new frmMain();
+                        frm.Show();
+                        break;
+                    }
+
+                    // Update result based on what happened in Login (e.g., did they click Signup? Forgot Password?)
+                    result = loginResult;
                 }
-                else if (loginResult == DialogResult.OK)
+                else if (result == DialogResult.No)
                 {
-                    // Successful login from the switched login form
-                    this.Hide();
-                    frmMain frm = new frmMain();
-                    frm.Show();
-                    break;
+                    // User clicked "Forgot Password" from the Login Form
+                    DialogResult forgotResult = ShowForgotPasswordFormAndGetResult();
+
+                    // After closing Forgot Password, usually we go back to Login
+                    if (forgotResult == DialogResult.OK)
+                    {
+                        result = DialogResult.OK; // Set to OK to trigger the Login form block above
+                    }
+                    else
+                    {
+                        result = forgotResult; // Could be Retry (Signup) or Cancel
+                    }
+                }
+                else if (result == DialogResult.Retry)
+                {
+                    // User clicked "Signup" from Login or Forgot Password Form
+                    result = ShowSignupFormAndGetResult();
                 }
                 else
                 {
+                    // User closed the forms (Cancel)
                     break;
                 }
             }
@@ -208,6 +263,34 @@ namespace Resturant_Management_System
                 result = signupForm.ShowDialog();
 
                 // Once Signup is closed, dispose of the overlay
+                modalBackground.Dispose();
+            }
+            return result;
+        }
+
+        private DialogResult ShowForgotPasswordFormAndGetResult()
+        {
+            Form modalBackground = new Form();
+            DialogResult result = DialogResult.Cancel;
+
+            using (frmForgotPassword forgotForm = new frmForgotPassword())
+            {
+                // Setup the Overlay (The "Blind" effect)
+                modalBackground.StartPosition = FormStartPosition.Manual;
+                modalBackground.FormBorderStyle = FormBorderStyle.None;
+                modalBackground.Opacity = 0.70d;
+                modalBackground.BackColor = Color.Black;
+                modalBackground.Size = this.Size;
+                modalBackground.Location = this.Location;
+                modalBackground.ShowInTaskbar = false;
+                modalBackground.Show(this);
+
+                forgotForm.Owner = modalBackground;
+
+                // Start position center of the dashboard
+                forgotForm.StartPosition = FormStartPosition.CenterParent;
+
+                result = forgotForm.ShowDialog();
                 modalBackground.Dispose();
             }
             return result;

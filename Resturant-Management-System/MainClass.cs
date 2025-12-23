@@ -72,6 +72,25 @@ namespace Resturant_Management_System
             }
             return res;
         }
+
+        // Method to get a user's security details
+        public static DataTable GetUserDetails(string username)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string qry = "SELECT username, SecurityQuestion, Answer FROM users WHERE username = @username";
+                SqlCommand cmd = new SqlCommand(qry, con);
+                cmd.Parameters.AddWithValue("@username", username);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show("Error: " + ex.Message);
+            }
+            return dt;
+        }
     }
 
 }

@@ -138,5 +138,12 @@ namespace Resturant_Management_System
             //this.Close();
             timerFadeOut.Start();
         }
+
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.No;
+            //this.Close();
+            timerFadeOut.Start();
+        }
     }
 }
