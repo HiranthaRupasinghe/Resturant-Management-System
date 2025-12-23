@@ -113,6 +113,10 @@ namespace Resturant_Management_System
                     // 3. Hide or Close the current form (frmMain)
                     // 'this' refers to the current instance of frmMain
                     this.Hide();
+
+                    Properties.Settings.Default.IsLoggedIn = false;
+                    Properties.Settings.Default.Save();
+
                 }
             }
         }

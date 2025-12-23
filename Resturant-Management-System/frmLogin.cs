@@ -87,6 +87,8 @@ namespace Resturant_Management_System
                 //timerFadeIn.Stop();
                 // 1. Display the successful login message using guna2MessageDialog3
                 guna2MessageDialog2.Show("Login Successfully for Our System.", "Login Successful!");
+                Properties.Settings.Default.IsLoggedIn = true;
+                Properties.Settings.Default.Save();
 
                 this.DialogResult = DialogResult.OK;
 

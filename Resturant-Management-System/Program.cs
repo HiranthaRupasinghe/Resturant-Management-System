@@ -16,7 +16,14 @@ namespace Resturant_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDashboard());
+            if (Properties.Settings.Default.IsLoggedIn)
+            {
+                Application.Run(new frmMain());
+            }
+            else
+            {
+                Application.Run(new frmDashboard());
+            }
         }
     }
 }

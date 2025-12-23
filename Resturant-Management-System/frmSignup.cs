@@ -82,10 +82,7 @@ namespace Resturant_Management_System
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnExit_Click_1(object sender, EventArgs e)
         {
