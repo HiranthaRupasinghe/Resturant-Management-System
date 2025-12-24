@@ -66,48 +66,40 @@ namespace Resturant_Management_System
         {
             DialogResult result = ShowLoginFormAndGetResult();
 
-            while (result == DialogResult.Retry)
+            while (result == DialogResult.Retry || result == DialogResult.No)
             {
-                // If DialogResult.OK is returned (which happens when btnSignup is clicked on frmLogin)
-                DialogResult signupResult = ShowSignupFormAndGetResult();
-
-                if (signupResult == DialogResult.OK)
+                if (result == DialogResult.Retry) // User clicked "Signup" from Login
                 {
-                    // If the user signed up successfully (DialogResult.OK from frmSignup)
-                    // automatically reopen the Login form.
-                    result = ShowLoginFormAndGetResult();
+                    DialogResult signupResult = ShowSignupFormAndGetResult();
+
+                    if (signupResult == DialogResult.OK)
+                    {
+                        // Signup was successful or user clicked "Login" button in Signup form
+                        result = ShowLoginFormAndGetResult();
+                    }
+                    else
+                    {
+                        // User clicked "Exit" or closed the Signup form
+                        return; // Exit the method entirely
+                    }
                 }
-
-                else
+                else if (result == DialogResult.No) // User clicked "Forgot Password"
                 {
-                    // User closed Signup form or finished
-                    break;
-                }
-            }
+                    DialogResult forgotResult = ShowForgotPasswordFormAndGetResult();
 
-            while (result == DialogResult.No)
-            {
-                // If DialogResult.OK is returned (which happens when btnSignup is clicked on frmLogin)
-                DialogResult forgotResult = ShowForgotPasswordFormAndGetResult();
-
-                if (forgotResult == DialogResult.OK)
-                {
-                    // If the user signed up successfully (DialogResult.OK from frmSignup)
-                    // automatically reopen the Login form.
-                    result = ShowLoginFormAndGetResult();
-                }
-
-                else if (forgotResult == DialogResult.Retry)
-                {
-                    // FIX: If user clicks "Signup" inside Forgot Password form
-                    result = DialogResult.Retry; // This will break this loop and trigger the Signup logic below
-                    break;
-                }
-
-                else
-                {
-                    // User closed Signup form or finished
-                    break;
+                    if (forgotResult == DialogResult.OK)
+                    {
+                        result = ShowLoginFormAndGetResult();
+                    }
+                    else if (forgotResult == DialogResult.Retry)
+                    {
+                        result = DialogResult.Retry; // Redirect to signup logic in next iteration
+                    }
+                    else
+                    {
+                        // User closed the Forgot Password form
+                        return;
+                    }
                 }
             }
 

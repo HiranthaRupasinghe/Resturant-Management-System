@@ -90,6 +90,9 @@ namespace Resturant_Management_System
 
             if (result == DialogResult.Yes)
             {
+                this.DialogResult = DialogResult.Cancel;
+
+                // This will trigger OnFormClosing, which starts the FadeOut timer
                 this.Close();
             }
         }
