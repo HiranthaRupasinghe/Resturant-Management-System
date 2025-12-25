@@ -123,6 +123,16 @@ namespace Resturant_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Hide {
+            get {
+                object obj = ResourceManager.GetObject("Hide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Home_1 {
             get {
                 object obj = ResourceManager.GetObject("Home-1", resourceCulture);
@@ -286,6 +296,16 @@ namespace Resturant_Management_System.Properties {
         internal static System.Drawing.Bitmap Table_2 {
             get {
                 object obj = ResourceManager.GetObject("Table-2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Unhide {
+            get {
+                object obj = ResourceManager.GetObject("Unhide", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

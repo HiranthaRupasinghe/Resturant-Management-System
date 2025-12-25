@@ -108,6 +108,15 @@ namespace Resturant_Management_System
         private void frmForgotPassword_Load(object sender, EventArgs e)
         {
             timerFadeIn.Start();
+
+            lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
+            guna2PictureBox1.Left = (this.ClientSize.Width - guna2PictureBox1.Width) / 2;
+
+            txtNewPass.UseSystemPasswordChar = true;
+            txtNewPass.IconRight = Properties.Resources.Hide;
+
+            txtConfirmPass.UseSystemPasswordChar = true;
+            txtConfirmPass.IconRight = Properties.Resources.Hide;
         }
 
         private void timerFadeIn_Tick(object sender, EventArgs e)
@@ -165,6 +174,40 @@ namespace Resturant_Management_System
             this.DialogResult = DialogResult.Retry;
             //this.Close();
             timerFadeOut.Start();
+        }
+
+        private void txtNewPass_IconRightClick(object sender, EventArgs e)
+        {
+            txtNewPass.UseSystemPasswordChar = !txtNewPass.UseSystemPasswordChar;
+
+            // Change the icon based on the new state
+            if (txtNewPass.UseSystemPasswordChar)
+            {
+                // Password is HIDDEN: Show the eye with the crosshair/slash
+                txtNewPass.IconRight = Properties.Resources.Hide;
+            }
+            else
+            {
+                // Password is VISIBLE: Show the clean eye without the crosshair
+                txtNewPass.IconRight = Properties.Resources.Unhide;
+            }
+        }
+
+        private void txtConfirmPass_IconRightClick(object sender, EventArgs e)
+        {
+            txtConfirmPass.UseSystemPasswordChar = !txtConfirmPass.UseSystemPasswordChar;
+
+            // Change the icon based on the new state
+            if (txtConfirmPass.UseSystemPasswordChar)
+            {
+                // Password is HIDDEN: Show the eye with the crosshair/slash
+                txtConfirmPass.IconRight = Properties.Resources.Hide;
+            }
+            else
+            {
+                // Password is VISIBLE: Show the clean eye without the crosshair
+                txtConfirmPass.IconRight = Properties.Resources.Unhide;
+            }
         }
     }
 }

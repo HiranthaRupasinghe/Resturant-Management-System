@@ -36,6 +36,7 @@ namespace Resturant_Management_System
             timerFadeIn.Start();
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
             btnExit.Left = (this.ClientSize.Width - btnExit.Width) / 2;
+            guna2PictureBox1.Left = (this.ClientSize.Width - guna2PictureBox1.Width) / 2;
         }
 
         private void timerFadeIn_Tick(object sender, EventArgs e)

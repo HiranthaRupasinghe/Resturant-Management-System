@@ -215,6 +215,9 @@
             this.txtNewPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNewPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNewPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNewPass.IconRight = global::Resturant_Management_System.Properties.Resources.Hide;
+            this.txtNewPass.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtNewPass.IconRightOffset = new System.Drawing.Point(2, 0);
             this.txtNewPass.Location = new System.Drawing.Point(42, 515);
             this.txtNewPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNewPass.Name = "txtNewPass";
@@ -223,6 +226,7 @@
             this.txtNewPass.Size = new System.Drawing.Size(343, 39);
             this.txtNewPass.TabIndex = 13;
             this.txtNewPass.UseSystemPasswordChar = true;
+            this.txtNewPass.IconRightClick += new System.EventHandler(this.txtNewPass_IconRightClick);
             // 
             // txtUsername
             // 
@@ -254,6 +258,9 @@
             this.txtConfirmPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtConfirmPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtConfirmPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtConfirmPass.IconRight = global::Resturant_Management_System.Properties.Resources.Hide;
+            this.txtConfirmPass.IconRightCursor = System.Windows.Forms.Cursors.Hand;
+            this.txtConfirmPass.IconRightOffset = new System.Drawing.Point(2, 0);
             this.txtConfirmPass.Location = new System.Drawing.Point(41, 605);
             this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirmPass.Name = "txtConfirmPass";
@@ -262,6 +269,7 @@
             this.txtConfirmPass.Size = new System.Drawing.Size(344, 39);
             this.txtConfirmPass.TabIndex = 16;
             this.txtConfirmPass.UseSystemPasswordChar = true;
+            this.txtConfirmPass.IconRightClick += new System.EventHandler(this.txtConfirmPass_IconRightClick);
             // 
             // label6
             // 

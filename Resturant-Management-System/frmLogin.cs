@@ -116,8 +116,11 @@ namespace Resturant_Management_System
             timerFadeIn.Start();
 
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
-
+            guna2PictureBox1.Left = (this.ClientSize.Width - guna2PictureBox1.Width) / 2;
             btnForgotPassword.Left = (this.ClientSize.Width - btnForgotPassword.Width) / 2;
+
+            txtPassword.UseSystemPasswordChar = true;
+            txtPassword.IconRight = Properties.Resources.Hide;
         }
 
         private void timerFadeIn_Tick(object sender, EventArgs e)
@@ -146,6 +149,23 @@ namespace Resturant_Management_System
             this.DialogResult = DialogResult.No;
             //this.Close();
             timerFadeOut.Start();
+        }
+
+        private void txtPassword_IconRightClick(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+
+            // Change the icon based on the new state
+            if (txtPassword.UseSystemPasswordChar)
+            {
+                // Password is HIDDEN: Show the eye with the crosshair/slash
+                txtPassword.IconRight = Properties.Resources.Hide;
+            }
+            else
+            {
+                // Password is VISIBLE: Show the clean eye without the crosshair
+                txtPassword.IconRight = Properties.Resources.Unhide;
+            }
         }
     }
 }

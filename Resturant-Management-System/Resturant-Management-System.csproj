@@ -217,5 +217,11 @@
   <ItemGroup>
     <None Include="Resources\H and M Resturant Management Logo-4.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unhide.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
