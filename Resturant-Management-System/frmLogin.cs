@@ -90,6 +90,10 @@ namespace Resturant_Management_System
                 Properties.Settings.Default.IsLoggedIn = true;
                 Properties.Settings.Default.Save();
 
+                Properties.Settings.Default.IsLoggedIn = true;
+                Properties.Settings.Default.LastLoginTime = DateTime.Now; // Record the login time
+                Properties.Settings.Default.Save();
+
                 this.DialogResult = DialogResult.OK;
 
                 // Start Fade-Out animation before closing
@@ -118,10 +122,6 @@ namespace Resturant_Management_System
             lblTitle.Left = (this.ClientSize.Width - lblTitle.Width) / 2;
             guna2PictureBox1.Left = (this.ClientSize.Width - guna2PictureBox1.Width) / 2;
             btnForgotPassword.Left = (this.ClientSize.Width - btnForgotPassword.Width) / 2;
-
-            Properties.Settings.Default.IsLoggedIn = true;
-            Properties.Settings.Default.LastLoginTime = DateTime.Now; // Record the login time
-            Properties.Settings.Default.Save();
 
             txtPassword.UseSystemPasswordChar = true;
             txtPassword.IconRight = Properties.Resources.Hide;
