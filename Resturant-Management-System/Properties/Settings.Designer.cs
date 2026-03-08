@@ -34,5 +34,16 @@ namespace Resturant_Management_System.Properties {
                 this["IsLoggedIn"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTime LastLoginTime {
+            get {
+                return ((global::System.DateTime)(this["LastLoginTime"]));
+            }
+            set {
+                this["LastLoginTime"] = value;
+            }
+        }
     }
 }

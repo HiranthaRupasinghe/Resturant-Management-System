@@ -16,12 +16,23 @@ namespace Resturant_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (Properties.Settings.Default.IsLoggedIn)
+
+            bool isLoggedIn = Properties.Settings.Default.IsLoggedIn;
+            DateTime lastLogin = Properties.Settings.Default.LastLoginTime;
+
+            // Calculate the difference in minutes
+            double minutesSinceLogin = (DateTime.Now - lastLogin).TotalMinutes;
+
+            // Check if logged in AND if it has been less than 5 minutes
+            if (isLoggedIn && minutesSinceLogin < 5)
             {
                 Application.Run(new frmMain());
             }
             else
             {
+                // Force logout if time expired or never logged in
+                Properties.Settings.Default.IsLoggedIn = false;
+                Properties.Settings.Default.Save();
                 Application.Run(new frmDashboard());
             }
         }

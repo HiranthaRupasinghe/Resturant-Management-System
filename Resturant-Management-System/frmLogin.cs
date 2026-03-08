@@ -119,6 +119,10 @@ namespace Resturant_Management_System
             guna2PictureBox1.Left = (this.ClientSize.Width - guna2PictureBox1.Width) / 2;
             btnForgotPassword.Left = (this.ClientSize.Width - btnForgotPassword.Width) / 2;
 
+            Properties.Settings.Default.IsLoggedIn = true;
+            Properties.Settings.Default.LastLoginTime = DateTime.Now; // Record the login time
+            Properties.Settings.Default.Save();
+
             txtPassword.UseSystemPasswordChar = true;
             txtPassword.IconRight = Properties.Resources.Hide;
         }
